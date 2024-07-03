@@ -20,4 +20,4 @@ cp -r brave/ fetch/ librewolf/ ~/void-packages/srcpkgs/
 ./xbps-install pkg <pkgname>
 ```
 
-And that is it.
+That's it for now. More packages will be added in the future.
