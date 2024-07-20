@@ -5,7 +5,7 @@ the official void-packages repository.
 
 To use these templates:
 
-```bash 
+```bash
 git clone https://github.com/void-linux/void-packages
 cd void-packages/
 ./xbps-install binary-bootstrap
@@ -13,10 +13,10 @@ cd void-packages/
 
 After that, clone the void-templates somewhere
 
-```bash 
+```bash
 git clone https://github.com/elbachir-one/void-templates
 cd void-templates/
-cp -r brave/ fetch/ librewolf/ ~/void-packages/srcpkgs/
+cp -r brave/ fetch/ librewolf/ gt/ ~/void-packages/srcpkgs/
 ./xbps-install pkg <pkgname>
 ```
 
