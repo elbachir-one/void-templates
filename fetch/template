@@ -1,6 +1,6 @@
 # Template file for 'fetch'
 pkgname=fetch
-version=1.2.0
+version=0.1.0
 revision=1
 build_style=go
 go_import_path="github.com/elbachir-one/${pkgname}"
@@ -8,11 +8,10 @@ short_desc="Simple fetch"
 maintainer="elbachir-one <bachiralfa@gmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/elbachir-one/fetch"
-distfiles="https://github.com/elbachir-one/fetch/archive/refs/tags/fetch-${version}.tar.gz"
-checksum=ca9d012ac4c7a8ebc9b0c8a74e28b2cb8625867387467a1227c89399f2f9d92f
+distfiles="https://github.com/elbachir-one/fetch/archive/refs/tags/v${version}.tar.gz"
+checksum=a0ea28248e16c212b2f3191cffb11d9606f4c28a1940be03cfc7a7f198ebfd4d
 
 do_build() {
-    go mod init github.com/elbachir-one/fetch
     go build -o fetch .
 }
 
