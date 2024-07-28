@@ -1,6 +1,6 @@
 # Template file for 'gt'
 pkgname=gt
-version=0.2.1
+version=1.2.0
 revision=1
 build_style=go
 go_import_path="github.com/elbachir-one/${pkgname}"
@@ -9,7 +9,7 @@ maintainer="elbachir-one <bachiralfa@gmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/elbachir-one/gt"
 distfiles="https://github.com/elbachir-one/gt/archive/refs/tags/v${version}.tar.gz"
-checksum=1a0dca65bcce261bf354a354c0eee04751cb80f204a8855905d7eb58e5e86613
+checksum=280d48d80b01ec23757ae032a74585d73433b41ad1601179e86a1e08699056eb
 
 do_build() {
     go build -o gt .
