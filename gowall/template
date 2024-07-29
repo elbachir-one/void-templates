@@ -1,0 +1,20 @@
+# Template file for 'gowall'
+pkgname=gowall
+version=0.1.0
+revision=1
+build_style=go
+go_import_path="github.com/Achno/${pkgname}"
+short_desc="Gowall is a tool to convert an image ( specifically a wallpaper ) to any color-scheme / pallete you like!"
+maintainer="elbachir-one <bachiralfa@gmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/Achno/gowall"
+distfiles="https://github.com/Achno/gowall/archive/refs/tags/v${version}.tar.gz"
+checksum=700cddb9545cab431cbd8eefc523b396d243dabb87812ba8f0360862827b0146
+
+do_build() {
+    go build -o gowall .
+}
+
+do_install() {
+    install -Dm755 gowall "$DESTDIR"/usr/bin/gowall
+}
