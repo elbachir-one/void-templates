@@ -1,6 +1,6 @@
 # Template file for 'gowall'
 pkgname=gowall
-version=0.1.0
+version=0.1.4
 revision=1
 build_style=go
 go_import_path="github.com/Achno/${pkgname}"
@@ -9,7 +9,7 @@ maintainer="elbachir-one <bachiralfa@gmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/Achno/gowall"
 distfiles="https://github.com/Achno/gowall/archive/refs/tags/v${version}.tar.gz"
-checksum=700cddb9545cab431cbd8eefc523b396d243dabb87812ba8f0360862827b0146
+checksum=227d6cd59b975149b37dda85a2d139d717ef794d582c211eaf6221aa2036e196
 
 do_build() {
     go build -o gowall .
