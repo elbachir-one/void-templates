@@ -1,6 +1,6 @@
 # Template file for 'gols'
 pkgname=gols
-version=1.2.1
+version=1.3.1
 revision=1
 build_style=go
 go_import_path="github.com/elbachir-one/${pkgname}"
@@ -9,7 +9,7 @@ maintainer="elbachir-one <bachiralfa@gmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/elbachir-one/gols"
 distfiles="https://github.com/elbachir-one/gols/archive/refs/tags/v${version}.tar.gz"
-checksum=17ffd9b7b3829424a31659b755c752a342bd3aeb034b344a184c615cde00ff6f
+checksum=78fcee5fdaf6430bd09e60707260abbcb941d5606b1af67092b3e5455ff6e2de
 
 do_build() {
     go build -o gols .
