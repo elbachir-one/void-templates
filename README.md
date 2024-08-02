@@ -8,7 +8,7 @@ To use these templates:
 ```bash
 git clone https://github.com/void-linux/void-packages
 cd void-packages/
-./xbps-install binary-bootstrap
+./xbps-src binary-bootstrap
 ```
 
 After that, clone the void-templates somewhere
@@ -16,8 +16,8 @@ After that, clone the void-templates somewhere
 ```bash
 git clone https://github.com/elbachir-one/void-templates
 cd void-templates/
-cp -r brave/ fetch/ librewolf/ gt/ ~/void-packages/srcpkgs/
-./xbps-install pkg <pkgname>
+cp -r <pkgname> ~/void-packages/srcpkgs/
+./xbps-src pkg <pkgname>
 ```
 
 That's it for now. More packages will be added in the future.
