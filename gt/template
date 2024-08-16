@@ -1,6 +1,6 @@
 # Template file for 'gt'
 pkgname=gt
-version=1.2.0
+version=1.3.1
 revision=1
 build_style=go
 go_import_path="github.com/elbachir-one/${pkgname}"
@@ -9,7 +9,7 @@ maintainer="elbachir-one <bachiralfa@gmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/elbachir-one/gt"
 distfiles="https://github.com/elbachir-one/gt/archive/refs/tags/v${version}.tar.gz"
-checksum=280d48d80b01ec23757ae032a74585d73433b41ad1601179e86a1e08699056eb
+checksum=7cf8c8579b960f60c9c5809f3c962a0a78972029e1a387109c1fc5052095d878
 
 do_build() {
     go build -o gt .
@@ -17,4 +17,5 @@ do_build() {
 
 do_install() {
     install -Dm755 gt "$DESTDIR"/usr/bin/gt
+    install -Dm644 gt.1 "$DESTDIR"/usr/share/man/man1/gt.1
 }
