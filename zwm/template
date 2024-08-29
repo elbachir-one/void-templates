@@ -1,0 +1,15 @@
+# Template file for 'zwm'
+pkgname=zwm
+version=0.1.11
+revision=1
+build_style=gnu-makefile
+short_desc="ZWM is an X11 tiling window manager"
+maintainer="elbachir-one <bachiralfa@gmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/Yazeed1s/zwm"
+distfiles="https://github.com/Yazeed1s/zwm/archive/refs/tags/${version}.tar.gz"
+checksum=1d759ceb482adcb29edc11cbdebe8dd2bdc86f2f27547816139e7cb2116d10d3
+
+do_install() {
+    install -Dm644 zwm.1 "$DESTDIR"/usr/share/man/man1/zwm.1
+}
