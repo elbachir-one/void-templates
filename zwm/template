@@ -3,13 +3,20 @@ pkgname=zwm
 version=0.1.11
 revision=1
 build_style=gnu-makefile
-short_desc="ZWM is an X11 tiling window manager"
+short_desc="Minimal tiling window manager for X11"
 maintainer="elbachir-one <bachiralfa@gmail.com>"
+makedepends="libxcb-devel xcb-util-devel xcb-util-wm-devel xcb-util-keysyms-devel xcb-util-cursor-devel"
+depends="libxcb xcb-util xcb-util-wm xcb-util-keysyms xcb-util-cursor"
 license="GPL-3.0-or-later"
 homepage="https://github.com/Yazeed1s/zwm"
 distfiles="https://github.com/Yazeed1s/zwm/archive/refs/tags/${version}.tar.gz"
 checksum=1d759ceb482adcb29edc11cbdebe8dd2bdc86f2f27547816139e7cb2116d10d3
 
+do_build() {
+    make PREFIX=/usr
+}
+
 do_install() {
+    make PREFIX=/usr DESTDIR=${DESTDIR} install
     install -Dm644 zwm.1 "$DESTDIR"/usr/share/man/man1/zwm.1
 }
