@@ -1,0 +1,23 @@
+# Template file for 'conway-screensaver'
+pkgname=conway-screensaver
+version=1.0.2
+revision=1
+build_style=gnu-makefile
+makedepends="ncurses-devel"
+short_desc="Conway's Game of Life (Terminal Screensaver)"
+maintainer="elbachir-one <bachiralfa@gmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/cdkw2/conway-screensaver"
+distfiles="https://github.com/cdkw2/conway-screensaver/archive/refs/tags/v${version}.tar.gz"
+checksum=f8598fa30f89b1a1c2d8cf7236768c7fa39e0a5090a3a76e2ed5fef2266f51b0
+
+# Add LDFLAGS to ensure proper linking with ncurses
+pre_build() {
+    export LDFLAGS+=" -lncurses -lm"
+}
+
+do_install() {
+    install -Dm755 conway-screensaver "$DESTDIR"/usr/bin/conway-screensaver
+    mkdir -p "$DESTDIR"/usr/share/doc/conway-screensaver
+    cp game_of_life.conf "$DESTDIR"/usr/share/doc/conway-screensaver/
+}
