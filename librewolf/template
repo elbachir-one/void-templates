@@ -1,6 +1,6 @@
 # Template file for 'librewolf'
 pkgname=librewolf
-version=127.0.2
+version=129.0.2
 revision=1
 _rev=2
 wrksrc=${pkgname}-${version}-${_rev}
