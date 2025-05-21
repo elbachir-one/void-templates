@@ -1,0 +1,26 @@
+# Template file for 'sxwm'
+pkgname=sxwm
+version=1.5
+revision=1
+build_style=gnu-makefile
+makedepends="libX11-devel libXinerama-devel libXcursor-devel"
+short_desc="Tiling window managers don't have to be difficult"
+maintainer="elbachir-one <bachiralfa@gmail.com>"
+license="MIT"
+homepage="https://github.com/uint23/sxwm"
+distfiles="https://github.com/uint23/sxwm/archive/refs/tags/v${version}.tar.gz"
+checksum=5443ae3955c50527c22253f20e1f6d5c96e6cc842ff7e3370d0f6920167148b7
+
+do_build() {
+	make LDFLAGS="-lX11 -lXinerama -lXcursor"
+}
+
+do_install() {
+	make PREFIX=/usr DESTDIR="$DESTDIR" install
+		vinstall default_sxrc 644 /usr/share/examples/sxwm/sxwmrc
+		vlicense LICENSE
+}
+
+post_install() {
+	rm -rf "${DESTDIR}/tmp"
+}
