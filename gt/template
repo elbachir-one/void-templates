@@ -1,21 +1,16 @@
 # Template file for 'gt'
 pkgname=gt
-version=1.4.1
+version=1.4.3
 revision=1
 build_style=go
-go_import_path="github.com/elbachir-one/${pkgname}"
-short_desc="A tree-like command-line tool written in Go"
+go_import_path="github.com/elbachir-one/gt"
+short_desc="Tree-like command-line tool written in Go"
 maintainer="elbachir-one <bachiralfa@gmail.com>"
-license="GPL-3.0-or-later"
+license="BSD-3-Clause"
 homepage="https://github.com/elbachir-one/gt"
 distfiles="https://github.com/elbachir-one/gt/archive/refs/tags/v${version}.tar.gz"
-checksum=8bbfa5b9b3ef756f547d0f40a4de612ffa957a6eb45fee735a9737c0a8824189
+checksum=33de9e42658c50eb639f8a6848ad89cb279d3fc35286c639b44b8b665c8d6f17
 
-do_build() {
-    go build -o gt .
-}
-
-do_install() {
-    install -Dm755 gt "$DESTDIR"/usr/bin/gt
-    install -Dm644 gt.1 "$DESTDIR"/usr/share/man/man1/gt.1
+post_install() {
+	vlicense LICENSE
 }
